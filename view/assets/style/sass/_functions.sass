@@ -1,0 +1,32 @@
+@import "variables"
+
+// PRE VENDOR FIXIN BORDER BOX
+
+=box-sizer($box-model)
+  -webkit-box-sizing: $box-model
+  -moz-box-sizing: $box-model
+  box-sizing: $box-model
+
+
+=background-sizer($box-model)
+  -webkit-background-size: $box-model
+  -moz-background-size: $box-model
+  background-size: $box-model
+  -o-background-size: $box-model
+
+
+
+//MEDIA QUERIES
+
+=smartphone
+  @media (min-width: #{$smartphone-width})
+    @content
+
+=tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+
+
+=desktop
+  @media (min-width: #{$desktop-width})
+    @content

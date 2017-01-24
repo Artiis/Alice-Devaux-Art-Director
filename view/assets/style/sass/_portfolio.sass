@@ -1,0 +1,96 @@
+@import "variables"
+
+//PORTFOLIO STYLING
+
+.gridder
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    position: relative
+    width: 33.33%
+  .overlay-info,
+  mask
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(0, 0, 0, 0.7)
+    height: 100%
+    width: 100%
+    display: none
+
+
+.gridder
+  li:hover
+    .overlay-info
+      display: block
+
+@media #{$smartphone-width}
+  .gridder-show
+    margin-bottom: 1px
+
+@media #{$desktop-width}
+  .gridder-show
+    margin-bottom: 5px
+
+@media #{$desktop-width}
+  .gridder-show
+    margin-bottom: 10px
+
+.gridder-padding
+  padding: 10px
+
+
+.info-box
+  position: absolute
+  color: #fff
+  bottom: 0
+  padding-left: 20px
+  @media #{$smartphone-width}
+    display: none
+
+.description
+  margin-top: 100px
+  margin-bottom: 50px
+
+.thumbnails
+  .column
+    img
+      margin: 0 0 10 0
+
+//ROW & GUTTER STYLING
+
+.row
+  //max-width: 100%
+  margin: 0
+  padding: 0
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child)
+  padding-right: 0
+  padding-left: 0
+
+
+
+
+//PORTFOLIO THUMBS CONTENT STYLING
+
+/*---VIDEO--*/
+
+.videoWrapper
+  position: relative
+  width: 100%
+  height: 0
+  padding-bottom: 56.25%
+  overflow: hidden
+  margin-bottom: -10px
+
+
+.videoWrapper iframe
+  position: absolute
+  top: 0
+  left: 0
+  width: 100% !important
+  height: 100% !important
+
+//GRIDDER
